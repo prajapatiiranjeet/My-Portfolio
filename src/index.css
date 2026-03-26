@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 34 33% 95%;
+    --foreground: 24 18% 8%;
+
+    --card: 34 25% 92%;
+    --card-foreground: 24 18% 8%;
+
+    --popover: 36 50% 97%;
+    --popover-foreground: 24 18% 8%;
+
+    --primary: 18 60% 60%;
+    --primary-foreground: 36 50% 97%;
+
+    --secondary: 34 25% 92%;
+    --secondary-foreground: 24 18% 8%;
+
+    --muted: 30 20% 88%;
+    --muted-foreground: 24 18% 52%;
+
+    --accent: 20 75% 81%;
+    --accent-foreground: 18 60% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 22% 84%;
+    --input: 30 22% 84%;
+    --ring: 18 60% 60%;
+
+    --radius: 0.75rem;
+
+    /* Claude palette tokens */
+    --claude-bg-base: 34 33% 95%;
+    --claude-bg-elevated: 34 25% 92%;
+    --claude-bg-surface: 36 50% 97%;
+    --claude-bg-overlay: 30 20% 87%;
+
+    --claude-brand: 18 60% 60%;
+    --claude-brand-hover: 18 55% 53%;
+    --claude-brand-soft: 22 75% 81%;
+    --claude-brand-muted: 18 68% 89%;
+
+    --claude-text-primary: 24 18% 8%;
+    --claude-text-secondary: 24 18% 30%;
+    --claude-text-muted: 24 18% 52%;
+    --claude-text-inverse: 36 50% 97%;
+
+    --claude-border: 30 22% 84%;
+    --claude-border-strong: 30 18% 74%;
+
+    --sidebar-background: 34 25% 92%;
+    --sidebar-foreground: 24 18% 30%;
+    --sidebar-primary: 18 60% 60%;
+    --sidebar-primary-foreground: 36 50% 97%;
+    --sidebar-accent: 22 75% 81%;
+    --sidebar-accent-foreground: 18 60% 45%;
+    --sidebar-border: 30 22% 84%;
+    --sidebar-ring: 18 60% 60%;
+  }
+
+  .dark {
+    --background: 24 15% 10%;
+    --foreground: 34 33% 90%;
+
+    --card: 24 14% 14%;
+    --card-foreground: 34 33% 90%;
+
+    --popover: 24 14% 12%;
+    --popover-foreground: 34 33% 90%;
+
+    --primary: 18 60% 60%;
+    --primary-foreground: 24 15% 10%;
+
+    --secondary: 24 14% 16%;
+    --secondary-foreground: 34 33% 90%;
+
+    --muted: 24 12% 20%;
+    --muted-foreground: 30 15% 55%;
+
+    --accent: 20 50% 30%;
+    --accent-foreground: 20 75% 75%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 34 33% 95%;
+
+    --border: 24 12% 20%;
+    --input: 24 12% 20%;
+    --ring: 18 60% 60%;
+
+    --claude-bg-base: 24 15% 10%;
+    --claude-bg-elevated: 24 14% 14%;
+    --claude-bg-surface: 24 14% 12%;
+    --claude-bg-overlay: 24 12% 18%;
+
+    --claude-brand: 18 60% 60%;
+    --claude-brand-hover: 18 55% 53%;
+    --claude-brand-soft: 20 40% 22%;
+    --claude-brand-muted: 18 30% 18%;
+
+    --claude-text-primary: 34 33% 92%;
+    --claude-text-secondary: 30 15% 68%;
+    --claude-text-muted: 30 12% 48%;
+    --claude-text-inverse: 24 15% 10%;
+
+    --claude-border: 24 12% 20%;
+    --claude-border-strong: 24 10% 28%;
+
+    --sidebar-background: 24 14% 14%;
+    --sidebar-foreground: 30 15% 68%;
+    --sidebar-primary: 18 60% 60%;
+    --sidebar-primary-foreground: 24 15% 10%;
+    --sidebar-accent: 20 40% 22%;
+    --sidebar-accent-foreground: 20 75% 75%;
+    --sidebar-border: 24 12% 20%;
+    --sidebar-ring: 18 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-claude-brand to-claude-brand-hover bg-clip-text text-transparent;
+  }
+}
