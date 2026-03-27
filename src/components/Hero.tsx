@@ -55,18 +55,10 @@ const Hero = () => {
           Building scalable backend systems with Java & Spring Boot
         </motion.p>
         <motion.div {...fadeUp(0.6)} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <motion.a
-            href="#projects"
-            onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }); }}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium text-base flex items-center gap-2"
-          >
-            View My Work <ArrowDown size={16} />
-          </motion.a>
+          no it will not work give me the old code
           <motion.a
   // 1. Use the direct download URL format
-  href="https://drive.google.com"
+  href="https://drive.google.com/file/d/1kLlZSzh1fA7Eh4HmtxB_0cCDHhYfXL1D/view?usp=drivesdk"
   target="_blank"
   rel="noopener noreferrer"
   // 2. Add the download attribute to force the browser to download
