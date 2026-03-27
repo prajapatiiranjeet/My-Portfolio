@@ -65,15 +65,19 @@ const Hero = () => {
             View My Work <ArrowDown size={16} />
           </motion.a>
           <motion.a
-            href="https://drive.google.com/file/d/1kLlZSzh1fA7Eh4HmtxB_0cCDHhYfXL1D/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium text-base flex items-center gap-2 hover:bg-primary/5 transition-colors"
-          >
-            Download Resume <Download size={16} />
-          </motion.a>
+  // 1. Use the direct download URL format
+  href="https://drive.google.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  // 2. Add the download attribute to force the browser to download
+  download="My_Resume.pdf" 
+  whileHover={{ scale: 1.04 }}
+  whileTap={{ scale: 0.97 }}
+  className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium text-base flex items-center gap-2 hover:bg-primary/5 transition-colors"
+>
+  Download Resume <Download size={16} />
+</motion.a>
+
         </motion.div>
       </div>
 
