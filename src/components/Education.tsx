@@ -73,7 +73,7 @@ const Education = () => {
           </h3>
 
           <a
-            href="https://drive.google.com/file/d/1bCi6BlTH09qFRtkBl68Z_THO8R60P0EZ/view?usp=sharing"
+            href="https://media.geeksforgeeks.org/courses/certificates/90907ad8910628c698649c63d2f81733.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="block group"
