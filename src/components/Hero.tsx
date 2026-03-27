@@ -55,7 +55,7 @@ const Hero = () => {
           Building scalable backend systems with Java & Spring Boot
         </motion.p>
         <motion.div {...fadeUp(0.6)} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          no it will not work give me the old code
+          
           <motion.a
   // 1. Use the direct download URL format
   href="https://drive.google.com/file/d/1kLlZSzh1fA7Eh4HmtxB_0cCDHhYfXL1D/view?usp=drivesdk"
