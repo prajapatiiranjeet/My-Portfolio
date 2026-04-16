@@ -65,7 +65,7 @@ const Hero = () => {
             View My Work <ArrowDown size={16} />
           </motion.a>
           <motion.a
-            href="https://drive.google.com/file/d/1kLlZSzh1fA7Eh4HmtxB_0cCDHhYfXL1D/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1czIAURaZcJAKwpTtrqPU7JLjmRu2fDT-/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}
