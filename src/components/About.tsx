@@ -5,9 +5,9 @@ import { personalInfo } from "@/lib/data";
 import profileImg from "@/assets/profile.jpg";
 
 const stats = [
-  { label: "2+ Projects Built" },
-  { label: "8.79 CGPA" },
-  { label: "Java Expert" },
+  { label: "8.82 / 10.0 CGPA" },
+  { label: "Java and Spring Boot" },
+  { label: "Basic High-Level Design (HLD)" },
 ];
 
 const About = () => {

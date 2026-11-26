@@ -57,17 +57,19 @@ const Projects = () => {
                 </ul>
 
                 {/* GitHub link */}
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="inline-flex items-center gap-2 bg-card hover:bg-claude-bg-overlay text-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-colors border border-claude-border"
-                >
-                  <Github size={16} />
-                  View on GitHub
-                </motion.a>
+                {project.github && (
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 0.97 }}
+                    className="inline-flex items-center gap-2 bg-card hover:bg-claude-bg-overlay text-foreground px-5 py-2.5 rounded-full text-sm font-medium transition-colors border border-claude-border"
+                  >
+                    <Github size={16} />
+                    View on GitHub
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           ))}

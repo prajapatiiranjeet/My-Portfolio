@@ -65,7 +65,8 @@ const Hero = () => {
             View My Work <ArrowDown size={16} />
           </motion.a>
           <motion.a
-            href="https://drive.google.com/file/d/1czIAURaZcJAKwpTtrqPU7JLjmRu2fDT-/view?usp=drivesdk"
+            href="/resume.pdf"
+            download="Ranjeet_Prajapati_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}
