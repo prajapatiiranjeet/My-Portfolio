@@ -16,7 +16,7 @@ const Skills = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="skills" className="py-24 px-6 bg-claude-bg-elevated/50" ref={ref}>
+    <section id="skills" className="swiss-band py-24 px-6" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -33,7 +33,7 @@ const Skills = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="bg-card rounded-2xl p-6 shadow-claude-sm hover:shadow-claude-md transition-shadow"
+              className="swiss-card p-6"
             >
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-primary">{iconMap[cat.icon]}</span>
@@ -43,7 +43,7 @@ const Skills = () => {
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-claude-brand-soft text-accent-foreground text-xs font-mono px-3 py-1.5 rounded-lg"
+                    className="swiss-chip text-claude-text-secondary text-xs font-mono px-0 py-1.5 mr-2 border-b border-claude-border"
                   >
                     {skill}
                   </span>

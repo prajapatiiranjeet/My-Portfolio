@@ -6,6 +6,13 @@
 
 @layer base {
   :root {
+    --swiss-white: #ffffff;
+    --swiss-black: #171614;
+    --swiss-paper: #f8f7f5;
+    --swiss-rule: #d9d7d4;
+    --swiss-text: #3c3936;
+    --swiss-tan: hsl(18 55% 48%);
+
     --background: 34 33% 95%;
     --foreground: 24 18% 8%;
 
@@ -66,6 +73,13 @@
   }
 
   .dark {
+    --swiss-white: #1b1917;
+    --swiss-black: #f4f1ed;
+    --swiss-paper: #211f1d;
+    --swiss-rule: #403c38;
+    --swiss-text: #d4cfca;
+    --swiss-tan: hsl(18 55% 66%);
+
     --background: 24 15% 10%;
     --foreground: 34 33% 90%;
 
@@ -129,14 +143,135 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    background: var(--swiss-white);
+    color: var(--swiss-black);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
   }
   html {
     scroll-behavior: smooth;
   }
 }
 
+.swiss-card {
+  border: 0;
+  border-top: 2px solid var(--swiss-black);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none !important;
+  transition: border-color 200ms ease;
+}
+
+.swiss-card:hover {
+  border-top-color: var(--swiss-tan);
+}
+
+.swiss-button {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.swiss-button:hover {
+  background-color: var(--swiss-black) !important;
+  color: var(--swiss-white) !important;
+}
+
+.swiss-button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--swiss-black);
+  outline-offset: 3px;
+}
+
+.swiss-chip {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none !important;
+  color: var(--swiss-text);
+}
+
+.swiss-band {
+  background: var(--swiss-paper);
+}
+
+.glass-nav {
+  background: hsl(var(--background) / 0.76);
+  -webkit-backdrop-filter: blur(12px) saturate(155%);
+  backdrop-filter: blur(12px) saturate(155%);
+  border-bottom: 1px solid hsl(var(--foreground) / 0.12);
+  box-shadow:
+    0 8px 24px hsl(var(--foreground) / 0.08),
+    inset 0 1px 0 hsl(var(--popover) / 0.8),
+    inset 0 -1px 0 hsl(var(--foreground) / 0.05);
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-nav {
+    background: hsl(var(--background) / 0.96);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass-nav {
+    background: hsl(var(--background));
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 4px 16px hsl(var(--foreground) / 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-nav {
+    transition: none;
+  }
+}
+
+main > section + section,
+main > footer {
+  border-top: 1px solid var(--swiss-rule);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--swiss-black);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+h1,
+h2 {
+  font-weight: 300 !important;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.text-gradient-brand {
+  background: none !important;
+  color: var(--swiss-tan) !important;
+  -webkit-text-fill-color: currentColor;
+}
+
 @layer utilities {
   .text-gradient-brand {
     @apply bg-gradient-to-r from-claude-brand to-claude-brand-hover bg-clip-text text-transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

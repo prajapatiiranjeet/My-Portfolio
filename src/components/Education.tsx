@@ -8,7 +8,7 @@ const Education = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section id="education" className="py-24 px-6 bg-claude-bg-elevated/50" ref={ref}>
+    <section id="education" className="swiss-band py-24 px-6" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -27,7 +27,7 @@ const Education = () => {
         >
           <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary" />
 
-          <div className="bg-card rounded-2xl p-6 sm:p-8 shadow-claude-sm">
+          <div className="swiss-card p-6 sm:p-8">
             <div className="flex items-start gap-3 mb-4">
               <GraduationCap size={24} className="text-primary shrink-0 mt-1" />
               <div>
@@ -50,7 +50,7 @@ const Education = () => {
                 {education.coursework.map((c) => (
                   <span
                     key={c}
-                    className="bg-claude-brand-muted text-accent-foreground text-xs font-mono px-3 py-1.5 rounded-lg"
+                    className="swiss-chip text-xs font-mono px-0 py-1.5 mr-2 border-b border-claude-border"
                   >
                     {c}
                   </span>
@@ -78,7 +78,7 @@ const Education = () => {
             rel="noopener noreferrer"
             className="block group"
           >
-            <div className="bg-card rounded-2xl overflow-hidden shadow-claude-sm border border-claude-border hover:border-primary transition-colors">
+            <div className="swiss-card overflow-hidden">
               <div className="relative">
                 <img
                   src={gfgCert}

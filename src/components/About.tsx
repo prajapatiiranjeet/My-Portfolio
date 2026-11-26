@@ -25,10 +25,12 @@ const About = () => {
             className="flex justify-center"
           >
             <div className="relative">
-              <div className="w-64 h-72 rounded-3xl bg-card shadow-claude-md flex flex-col items-center justify-center gap-4">
-              <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary to-claude-brand-hover p-1">
-                  <img src={profileImg} alt="Ranjeet Prajapati" className="w-full h-full rounded-full object-cover" />
-                </div>
+              <div className="swiss-card w-72 flex flex-col items-center justify-center gap-4 py-6">
+                <img
+                  src={profileImg}
+                  alt="Ranjeet Prajapati"
+                  className="h-64 w-48 object-cover object-center"
+                />
                 <h3 className="font-display text-xl font-semibold text-foreground">{personalInfo.name}</h3>
                 <div className="flex items-center gap-1.5 text-claude-text-muted text-sm">
                   <MapPin size={14} />
@@ -54,7 +56,7 @@ const About = () => {
               {stats.map((stat) => (
                 <span
                   key={stat.label}
-                  className="bg-claude-brand-soft text-accent-foreground px-4 py-2 rounded-full text-sm font-medium"
+                  className="swiss-chip px-0 py-2 border-b border-claude-border text-sm font-medium"
                 >
                   {stat.label}
                 </span>

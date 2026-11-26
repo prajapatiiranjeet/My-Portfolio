@@ -13,23 +13,6 @@ const fadeUp = (delay: number) => ({
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Floating blobs */}
-      <motion.div
-        animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
-        transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-        className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-accent/40 blur-3xl"
-      />
-      <motion.div
-        animate={{ x: [0, -25, 0], y: [0, 25, 0] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-claude-brand-muted/50 blur-3xl"
-      />
-      <motion.div
-        animate={{ x: [0, 15, 0], y: [0, 15, 0] }}
-        transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-        className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-claude-brand-soft/30 blur-3xl"
-      />
-
       <div className="relative z-10 text-center px-6 max-w-4xl">
         <motion.p {...fadeUp(0)} className="text-claude-text-muted font-sans text-lg mb-3">
           Hello, I'm
@@ -58,9 +41,7 @@ const Hero = () => {
           <motion.a
             href="#projects"
             onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }); }}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium text-base flex items-center gap-2"
+            className="swiss-button bg-primary text-primary-foreground px-8 py-3 rounded-none font-medium text-sm flex items-center gap-2 focus-visible:outline-none"
           >
             View My Work <ArrowDown size={16} />
           </motion.a>
@@ -69,9 +50,7 @@ const Hero = () => {
             download="Ranjeet_Prajapati_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="border-2 border-primary text-primary px-8 py-3 rounded-full font-medium text-base flex items-center gap-2 hover:bg-primary/5 transition-colors"
+            className="swiss-button border border-foreground text-foreground px-8 py-3 rounded-none font-medium text-sm flex items-center gap-2 focus-visible:outline-none"
           >
             Download Resume <Download size={16} />
           </motion.a>

@@ -30,9 +30,7 @@ const ThemeToggle = () => {
   return (
     <motion.button
       onClick={() => setDark(!dark)}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-claude-bg-overlay transition-colors"
+      className="swiss-button w-10 h-10 rounded-none border border-claude-border bg-background flex items-center justify-center text-foreground focus-visible:outline-none"
       aria-label="Toggle theme"
     >
       {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}

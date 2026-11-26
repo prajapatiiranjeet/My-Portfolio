@@ -48,9 +48,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-12 h-12 rounded-full bg-card border border-claude-border flex items-center justify-center text-claude-text-secondary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+            className="swiss-button w-12 h-12 rounded-none border border-claude-border bg-transparent flex items-center justify-center text-claude-text-secondary focus-visible:outline-none"
           >
             <Linkedin size={20} />
           </motion.a>
@@ -59,9 +57,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-12 h-12 rounded-full bg-card border border-claude-border flex items-center justify-center text-claude-text-secondary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+            className="swiss-button w-12 h-12 rounded-none border border-claude-border bg-transparent flex items-center justify-center text-claude-text-secondary focus-visible:outline-none"
           >
             <Github size={20} />
           </motion.a>

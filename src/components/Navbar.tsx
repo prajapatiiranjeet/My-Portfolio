@@ -25,7 +25,7 @@ const Navbar = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed top-0 left-0 right-0 z-50 border-b border-claude-border backdrop-blur-xl bg-claude-bg-base/80"
+          className="glass-nav fixed top-0 left-0 right-0 z-50"
         >
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div className="w-10 h-10 rounded-full bg-primary p-0.5">
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <button
                   key={link}
                   onClick={() => scrollTo(link)}
-                  className="text-sm font-medium text-claude-text-secondary hover:text-claude-brand transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                  className="swiss-button rounded-none px-3 py-2 text-sm font-medium text-claude-text-secondary hover:text-primary transition-colors duration-200 focus-visible:outline-none"
                 >
                   {link}
                 </button>
@@ -47,9 +47,7 @@ const Navbar = () => {
               <motion.a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); scrollTo("Contact"); }}
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-medium"
+                className="swiss-button bg-primary text-primary-foreground px-5 py-2 rounded-none text-sm font-medium focus-visible:outline-none"
               >
                 Hire Me
               </motion.a>

@@ -18,10 +18,12 @@ export interface SkillCategory {
 
 export interface Project {
   title: string;
-  subtitle: string;
+  description: string;
+  category: string;
   tech: string[];
-  points: string[];
-  github?: string;
+  github: string;
+  liveDemo?: string;
+  featured?: boolean;
 }
 
 export interface Education {
@@ -92,35 +94,79 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "AI-Powered College ERP System",
-    subtitle: "College ERP backend and RAG chatbot",
-    tech: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "JWT",
-      "Hibernate",
-      "Spring AI",
-      "PostgreSQL",
-      "PGVector",
-    ],
-    points: [
-      "Building a college ERP backend with JWT authentication and role-based access control across Admin, Faculty, and Student modules.",
-      "Designed a normalized PostgreSQL schema with Hibernate and Spring Data JPA to model academic and administrative workflows and enforce data integrity.",
-      "Built secure REST APIs using a layered Controller-Service-Repository architecture, Spring Security, and role-based authorization.",
-      "Developed a standalone RAG chatbot with Spring AI, Ollama, and PostgreSQL/PGVector; implemented PDF and DOCX ingestion, document chunking, and embedding pipelines, and am integrating it into the ERP.",
-    ],
+    title: "AI-Powered ERP",
+    description:
+      "A role-based academic ERP for Admin, Faculty, and Students, with attendance workflows and SHERPAL, a document-grounded RAG assistant.",
+    category: "AI & Data",
+    tech: ["Java 21", "Spring Boot", "React", "PostgreSQL", "PGVector", "Spring AI"],
+    github: "https://github.com/prajapatiiranjeet/Ai-Powered-ERP",
+    featured: true,
   },
   {
-    title: "SpringGuard - JWT Security Setup",
-    subtitle: "Reusable Spring Boot authentication and authorization setup",
-    tech: ["Java", "Spring Boot", "Spring Security", "JWT", "Spring Data JPA", "Hibernate", "PostgreSQL"],
-    points: [
-      "Built a reusable Spring Boot security setup with stateless JWT authentication, role-based authorization, and BCrypt password hashing.",
-      "Designed a layered Controller-Service-Repository architecture with JPA/Hibernate entities and PostgreSQL persistence for secure application bootstrapping.",
-      "Implemented a JWT filter chain to validate Bearer tokens, extract claims, and populate the Spring Security context for stateless request authentication.",
-      "Exposed registration and login REST APIs as a reusable setup for integration into new Spring Boot projects.",
-    ],
+    title: "System Design",
+    description:
+      "An interactive course with 40 lessons, step-by-step scenes, lesson search, keyboard navigation, language and theme controls, and saved progress.",
+    category: "Learning",
+    tech: ["Interactive Lessons", "System Design", "Search", "Saved Progress"],
+    github: "https://github.com/prajapatiiranjeet/System-Design",
+    liveDemo: "https://system-design-4upg.vercel.app/",
+  },
+  {
+    title: "GRAB",
+    description:
+      "A lightweight web app for fetching public video and audio with yt-dlp, with playlist selection and live job progress.",
+    category: "Backend & Tools",
+    tech: ["Preact", "FastAPI", "Python", "yt-dlp", "Docker"],
+    github: "https://github.com/prajapatiiranjeet/GRAB",
+  },
+  {
+    title: "Vectorless Intelligence",
+    description:
+      "A document Q&A system that navigates a hierarchical document tree and retrieves original passages without embeddings or a vector database.",
+    category: "AI & Data",
+    tech: ["Java", "Spring Boot", "Spring AI", "PostgreSQL", "React", "Server-Sent Events"],
+    github: "https://github.com/prajapatiiranjeet/Vectorless-Intelligence",
+  },
+  {
+    title: "VectorScope",
+    description:
+      "A local-first workspace for importing embedding CSVs, exploring a 3D PCA map, and comparing vectors with similarity search in the browser.",
+    category: "AI & Data",
+    tech: ["JavaScript", "PCA", "3D Visualization", "Vector Search", "CSV"],
+    github: "https://github.com/prajapatiiranjeet/VectorScope",
+    liveDemo: "https://vectorscope.onrender.com",
+  },
+  {
+    title: "AI-Powered Resume Analyzer",
+    description:
+      "A React and Spring AI app that turns a written profile description into structured resume data and a formatted preview.",
+    category: "AI & Data",
+    tech: ["React", "Java", "Spring Boot", "Spring AI", "Resume Generation"],
+    github: "https://github.com/prajapatiiranjeet/Ai-Powered-Resume_Analyzer",
+  },
+  {
+    title: "JWT Security Setup",
+    description:
+      "A Spring Boot authentication example with stateless JWTs, role-based authorization, BCrypt password hashing, and PostgreSQL persistence.",
+    category: "Backend & Tools",
+    tech: ["Java 21", "Spring Security", "JWT", "Spring Data JPA", "PostgreSQL"],
+    github: "https://github.com/prajapatiiranjeet/security_setup_with-JWT",
+  },
+  {
+    title: "DSA Practice",
+    description:
+      "A growing collection of LeetCode practice problems, organized by topic across arrays, strings, trees, searching, and more.",
+    category: "Learning",
+    tech: ["LeetCode", "Data Structures", "Algorithms"],
+    github: "https://github.com/prajapatiiranjeet/DSA-practice",
+  },
+  {
+    title: "Spring AI with RAG",
+    description:
+      "A document question-answering demo that extracts PDF and DOCX content, chunks it, stores embeddings in PGVector, and answers with Ollama.",
+    category: "AI & Data",
+    tech: ["Java 21", "Spring Boot", "Spring AI", "PostgreSQL", "PGVector", "Ollama"],
+    github: "https://github.com/prajapatiiranjeet/Spring-ai_with-RAG",
   },
 ];
 
